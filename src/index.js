@@ -16,6 +16,6 @@ module.exports = function solveEquation(equation) {
     answer[0] = (+-eq[1] + Math.round(Math.sqrt(Math.pow(+eq[1], 2) - 4 * +eq[0] * +eq[2]))) / (2 * +eq[0]);
     answer[1] = (+-eq[1] - Math.round(Math.sqrt(Math.pow(+eq[1], 2) - 4 * +eq[0] * +eq[2]))) / (2 * +eq[0]);
   }
-  ansver.sort(function (a,b) {return a-b;});
+  answer.sort(function (a,b) {return a-b;});
   return answer;
 }
