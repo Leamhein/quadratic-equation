@@ -1,5 +1,5 @@
 module.exports = function solveEquation(equation) {
-  var ansver = [],
+  var answer = [],
   D,
   eq = equation.split("^2").join("").split(" * x "); //split the equation into parts without "x" and "^2"
   for (let i = 0; i < eq.length; i++) {
@@ -13,9 +13,9 @@ module.exports = function solveEquation(equation) {
   } //after the above actions, we have an array with values a, b, c from the quadratic equation
   D = +eq[1] * +eq[1] - 4 * +eq[0] * +eq[2]; //discriminant
   if (D > 0) {
-    ansver[0] = (+-eq[1] + Math.round(Math.sqrt(Math.pow(+eq[1], 2) - 4 * +eq[0] * +eq[2]))) / (2 * +eq[0]);
-    ansver[1] = (+-eq[1] - Math.round(Math.sqrt(Math.pow(+eq[1], 2) - 4 * +eq[0] * +eq[2]))) / (2 * +eq[0]);
+    answer[0] = (+-eq[1] + Math.round(Math.sqrt(Math.pow(+eq[1], 2) - 4 * +eq[0] * +eq[2]))) / (2 * +eq[0]);
+    answer[1] = (+-eq[1] - Math.round(Math.sqrt(Math.pow(+eq[1], 2) - 4 * +eq[0] * +eq[2]))) / (2 * +eq[0]);
   }
   ansver.sort(function (a,b) {return a-b;});
-  return ansver;
+  return answer;
 }
